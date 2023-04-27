@@ -1,0 +1,48 @@
+:root {
+  --color-primario: #ffc0cb90;
+  --color-secundario: #c7158590;
+}
+.card {
+  max-width: 320px;
+  padding: 1em 0.5em;
+
+  background-color: var(--box-bg);
+  backdrop-filter: blur($box-blur);
+  border: $box-border;
+  border-radius: $box-radius;
+
+  text-align: center;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__image {
+    border-radius: 0.3em;
+  }
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  &__title {
+    padding: 0.5em 0em;
+    font-family: 'Roboto';
+    font-size: 2em;
+  }
+  &__text {
+    padding: 1em 0em;
+
+    border-top: $box-border;
+    font-style: italic;
+  }
+  &__btn {
+    padding: 0.5em 1.5em;
+
+    background-color: var(--color-primario);
+    border-radius: $box-radius;
+
+    transition: $transition-hover background-color ease-out;
+    &:hover {
+      background-color: var(--color-secundario);
+    }
+  }
+}
