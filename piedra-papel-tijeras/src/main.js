@@ -1,7 +1,4 @@
 const botones = document.querySelectorAll('.game__button');
-const piedra = document.querySelector('#piedra');
-const papel = document.querySelector('#papel');
-const tijeras = document.querySelector('#tijeras');
 const ganador = document.querySelector('.game__winner');
 
 botones.forEach((boton) => {
