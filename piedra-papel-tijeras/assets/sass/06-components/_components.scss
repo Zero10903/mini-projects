@@ -5,7 +5,9 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
+
   background-color: blueviolet;
+  transition: $transition-time background-color ease-in-out;
 
   &__title {
     font-size: 2em;

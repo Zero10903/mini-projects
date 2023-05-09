@@ -158,7 +158,6 @@ body {
 
 body {
   min-height: 100vh;
-  background-color: #c0c0c0;
 }
 
 .game {
@@ -169,6 +168,7 @@ body {
   align-items: center;
   gap: 1em;
   background-color: blueviolet;
+  transition: 0.3s background-color ease-in-out;
 }
 .game__title {
   font-size: 2em;
