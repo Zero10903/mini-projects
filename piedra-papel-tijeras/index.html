@@ -4,14 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/sass/main.css" />
     <title>Piedra, Papel o Tijeras | Zero's World</title>
   </head>
   <body>
     <main class="game">
+      <h1 class="game__title">Piedra, papel o tijeras</h1>
       <article class="game__controls">
-        <input type="button" value="1" />
-        <input type="button" value="2" />
-        <input type="button" value="3" />
+        <input
+          class="game__button game__button--piedra"
+          id="piedra"
+          type="button"
+          value="Piedra"
+        />
+        <input
+          class="game__button game__button--papel"
+          id="papel"
+          type="button"
+          value="Papel"
+        />
+        <input
+          class="game__button game__button--tijeras"
+          id="tijeras"
+          type="button"
+          value="Tijeras"
+        />
       </article>
       <article class="game__result">
         <h3><span class="game__winner"></span> ha ganado...</h3>
