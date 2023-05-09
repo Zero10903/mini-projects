@@ -11,28 +11,17 @@
     <main class="game">
       <h1 class="game__title">Piedra, papel o tijeras</h1>
       <article class="game__controls">
-        <input
-          class="game__button game__button--piedra"
-          id="piedra"
-          type="button"
-          value="Piedra"
-        />
-        <input
-          class="game__button game__button--papel"
-          id="papel"
-          type="button"
-          value="Papel"
-        />
-        <input
+        <button class="game__button game__button--piedra" id="piedra"></button>
+        <button class="game__button game__button--papel" id="papel"></button>
+        <button
           class="game__button game__button--tijeras"
           id="tijeras"
-          type="button"
-          value="Tijeras"
-        />
+        ></button>
       </article>
       <article class="game__result">
-        <h3><span class="game__winner"></span> ha ganado...</h3>
+        <h3 class="game__winner"></h3>
       </article>
     </main>
+    <script src="./src/main.js"></script>
   </body>
 </html>
