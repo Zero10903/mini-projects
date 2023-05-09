@@ -97,7 +97,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -190,13 +190,23 @@ body {
   transform: scale(1.05);
 }
 .game__button--piedra {
-  background: center/cover url("../images/piedra.jpg");
+  background: center/cover url('../images/piedra.jpg');
 }
 .game__button--papel {
-  background: center/cover url("../images/papel.jpg");
+  background: center/cover url('../images/papel.jpg');
 }
 .game__button--tijeras {
-  background: center/cover url("../images/tijeras.png");
+  background: center/cover url('../images/tijeras.png');
+}
+.game__result {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+  text-align: center;
+}
+.game__warning {
+  font-size: 0.8em;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=main.css.map */

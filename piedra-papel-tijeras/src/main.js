@@ -4,10 +4,11 @@ const game = document.querySelector('.game');
 
 const reiniciarMensaje = () => {
   setTimeout(() => {
-    ganador.innerHTML = 'Esperando resultado...';
+    ganador.innerHTML = '<i>Esperando resultado...</i>';
     game.style.backgroundColor = 'blueviolet';
   }, 1500);
 };
+reiniciarMensaje();
 
 const victoria = () => {
   ganador.innerHTML = 'Has ganado :D';

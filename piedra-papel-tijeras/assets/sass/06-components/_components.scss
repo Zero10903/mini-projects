@@ -42,4 +42,13 @@
       background: center/cover url('../images/tijeras.png');
     }
   }
+  &__result {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
+  }
+  &__warning {
+    font-size: 0.8em;
+    font-style: italic;
+  }
 }
