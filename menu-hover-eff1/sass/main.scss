@@ -1,0 +1,64 @@
+@import './reset';
+
+.menu {
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+
+  &__link {
+    padding: 1.3em 2em;
+    position: relative;
+    z-index: 1;
+    color: #141414;
+    transition: 0.3s all ease-in-out;
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: #141414;
+
+      transform: scale(0);
+
+      transition: 0.3s all ease-in-out;
+    }
+    &::after {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      z-index: -1;
+      border-top: 2px solid #141414;
+      border-bottom: 2px solid #141414;
+
+      transform: scale(1.5);
+      opacity: 0;
+
+      transition: 0.3s all ease-in-out;
+    }
+
+    &:hover {
+      color: #f0f0f0;
+
+      &::before {
+        transform: scale(1);
+      }
+      &::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+}
