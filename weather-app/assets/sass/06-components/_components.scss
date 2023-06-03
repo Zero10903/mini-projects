@@ -1,0 +1,106 @@
+@use '../02-tools/effect';
+@use '../02-tools/layout';
+@use '../02-tools/text';
+
+.container {
+  //   width: 100%;
+  margin: 1em;
+  @include layout.flex(column, nowrap, center, center);
+}
+
+.search {
+  padding: 0em 3em 1em;
+  box-shadow: $box-shadow;
+  @include effect.glass();
+  @include layout.flex-center(column);
+
+  &__input {
+    margin-bottom: 1em;
+    padding: 1em 1em 0.4em;
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: center;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+  &__btn {
+    padding: 0.5em 2em;
+    background-color: $color-light;
+    border: $box-border;
+    border-radius: $box-radius;
+    box-shadow: $box-shadow;
+
+    transition: 0.1s all ease-in-out;
+    &:hover {
+      color: white;
+      background-color: $color-dark;
+    }
+  }
+}
+.current {
+  margin: 1em;
+  padding: 2em 1em;
+  box-shadow: $box-shadow;
+  @include effect.glass();
+
+  &__title {
+    padding-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.current-condition {
+  &__content {
+    margin-top: 1em;
+    @include layout.flex-center();
+  }
+  &__icon {
+    @include layout.square(5em);
+  }
+}
+
+.h2 {
+  padding: 0.5em 2em;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: $box-radius;
+  box-shadow: $box-shadow;
+  @include effect.glass();
+}
+
+.forecasts {
+  width: 100%;
+  @include layout.flex-center(column);
+}
+
+.forecast {
+  margin: 1em;
+  padding: 2em 1em;
+  box-shadow: $box-shadow;
+  @include effect.glass();
+  &__title {
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+.condition {
+  &__content {
+    margin-top: 1em;
+    @include layout.flex-center();
+  }
+  &__icon {
+    @include layout.square(5em);
+  }
+}
+
+@media (min-width: 1024px) {
+  .forecasts {
+    @include layout.flex-center();
+  }
+}

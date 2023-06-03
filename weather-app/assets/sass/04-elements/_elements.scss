@@ -1,0 +1,6 @@
+body {
+  background: url('../images/background.png') center / cover no-repeat;
+}
+section p:not(:last-child) {
+  padding-bottom: 1em;
+}

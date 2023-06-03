@@ -1,0 +1,44 @@
+// Blur effect
+@mixin blur($blur) {
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}
+
+// Glass effect using blur
+@mixin glass($blur: 12px) {
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  background-color: #ffffff10;
+}
+
+// Glass effect GPT
+@mixin glass-effect {
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+// Gradient effect
+@mixin bg-gradient($start-color, $end-color) {
+  background: $start-color;
+  background: linear-gradient(to bottom, $start-color 0%, $end-color 100%);
+}
+
+// Animated background gradient
+@mixin a-bg-gradient($angle, $start-color, $end-color, $animation-duration) {
+  background: linear-gradient($angle, $start-color, $end-color);
+  background-size: 400% 400%;
+  animation: gradient $animation-duration ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

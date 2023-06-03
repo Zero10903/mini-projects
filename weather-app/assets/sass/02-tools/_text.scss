@@ -1,0 +1,14 @@
+// Text shorten
+@mixin shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Text gradient
+@mixin gradient($start-color, $end-color) {
+  background: -webkit-linear-gradient($start-color, $end-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

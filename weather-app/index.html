@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/sass/main.css" />
+    <title>Weather App | Zero's World</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="search">
+        <input class="search__input" type="text" placeholder="Buscar ciudad" />
+        <button class="search__btn">Buscar</button>
+      </section>
+
+      <section class="current">
+        <h2 class="current__title">Pronóstico actual</h2>
+        <p>Temperatura: <span class="current__temp"></span></p>
+        <p>Sensación térmica: <span class="current__feelslike"></span></p>
+        <p>Velocidad del viento: <span class="current__windspd"></span></p>
+        <div class="current-condition">
+          <h3>Condición:</h3>
+          <div class="current-condition__content">
+            <img
+              src="./assets/images/misterio.png"
+              alt="icono de la condición climatica"
+              class="current-condition__icon"
+            />
+            <p class="current-condition__text"></p>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="h2">Pronostico de 3 dias</h2>
+      <section class="forecasts">
+        <article class="forecast">
+          <h3 class="forecast__title">
+            Fecha: <span class="forecast__day forecast__day--0"></span>
+          </h3>
+          <p>Temperatura máxima: <span class="forecast__maxtemp--0"></span></p>
+          <p>Temperatura mínima: <span class="forecast__mintemp--0"></span></p>
+          <div class="condition">
+            <h3>Condición:</h3>
+            <div class="condition__content">
+              <img
+                src="./assets/images/misterio.png"
+                alt="icono de la condición climatica"
+                class="condition__icon condition__icon--0"
+              />
+              <p class="condition__text--0"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="forecast">
+          <h3 class="forecast__title">
+            Fecha: <span class="forecast__day forecast__day--1"></span>
+          </h3>
+          <p>Temperatura máxima: <span class="forecast__maxtemp--1"></span></p>
+          <p>Temperatura mínima: <span class="forecast__mintemp--1"></span></p>
+          <div class="condition">
+            <h3>Condición:</h3>
+            <div class="condition__content">
+              <img
+                src="./assets/images/misterio.png"
+                alt="icono de la condición climatica"
+                class="condition__icon condition__icon--1"
+              />
+              <p class="condition__text--1"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="forecast">
+          <h3 class="forecast__title">
+            Fecha: <span class="forecast__day forecast__day--2"></span>
+          </h3>
+          <p>Temperatura máxima: <span class="forecast__maxtemp--2"></span></p>
+          <p>Temperatura mínima: <span class="forecast__mintemp--2"></span></p>
+          <div class="condition">
+            <h3>Condición:</h3>
+            <div class="condition__content">
+              <img
+                src="./assets/images/misterio.png"
+                alt="icono de la condición climatica"
+                class="condition__icon condition__icon--2"
+              />
+              <p class="condition__text--2"></p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </body>
+  <script src="./src/main.js"></script>
+</html>
