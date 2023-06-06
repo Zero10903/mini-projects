@@ -1,0 +1,98 @@
+@import './mixins/reset';
+
+body {
+	min-height: 100vh;
+	background-color: lightpink;
+}
+
+.menu {
+	width: 100%;
+	height: fit-content;
+	position: sticky;
+	top: 0;
+	color: white;
+
+	&__controls {
+		padding: 1em;
+		font-size: 1.3em;
+
+		backdrop-filter: blur(10px);
+		border-radius: 0em 0em 0.5em 0.5em;
+
+		display: grid;
+		grid-template-columns: repeat(2, max-content);
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__btn {
+		height: 1.3em;
+		width: 1.3em;
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		transform: scale(1);
+		transition: 0.3s transform ease-in-out;
+
+		&--hide {
+			transform: scale(0);
+		}
+	}
+	&__icon {
+		font-size: 1.3em;
+	}
+	&__navbar {
+		height: 100vh;
+		width: 100vw;
+		padding: 1em;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		background-color: #000000dd;
+
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+
+		clip-path: circle(300% at 100% 0%);
+		transition: 0.3s clip-path ease-in-out;
+
+		&--hide {
+			clip-path: circle(0% at 100% 0%);
+		}
+	}
+	&__link {
+		padding: 0.5em;
+		position: relative;
+		text-align: center;
+
+		transition: 0.5s all;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+
+			height: 100%;
+			width: 0%;
+			background-color: pink;
+
+			transition: 0.5s width;
+		}
+		&:hover {
+			color: black;
+
+			&::before {
+				content: '';
+				height: 100%;
+				width: 100%;
+				background-color: pink;
+			}
+		}
+	}
+}
